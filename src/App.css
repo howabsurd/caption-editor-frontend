@@ -1,38 +1,110 @@
-.App {
+.app{
+  /* width: 100%; */
+  max-width: 1600px;
+  margin: auto auto;    
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.player{
+  margin: 12px 0 0 0 ;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.caption-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%; 
+  /* font-size: 20px; */
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  height:45px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+ 
+/* .container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 80%;
 }
+
+.playerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.videoPlayer {
+  border-radius: 1em;
+  z-index: -1;
+}
+
+.controlsContainer {
+  margin-top: -3.5em;
+}
+
+.controls {
+  display: flex;
+  z-index: 1;
+  color: white;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.controlButton {
+  border: none;
+  background: none;
+}
+
+.timeline {
+  width: 100%;
+}
+
+.duration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controlButton:hover {
+  cursor: pointer;
+}
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+} */
+
+/* .player-wrapper {
+  position: relative;
+  padding-top: 56.25%; 
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
