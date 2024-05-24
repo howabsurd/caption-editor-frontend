@@ -3,6 +3,8 @@ import Player from './Player';
 import './App.css';
 import Header from './Header';
 import FormCaptions from "./FormCaptions"
+import Banner1 from './Banner1';
+import TwoCardComponent from './TwoCard';
 
 function App() {
   const [URL, setURL] = useState("");
@@ -36,6 +38,8 @@ function App() {
   return (
     <div className="app">
       <Header />
+      <Banner1 />
+      <TwoCardComponent />
       <Player captions={captions} URL={URL} />
       <FormCaptions URL={URL} setURL={setURL} setCaptions={setCaptions}/>
     </div>

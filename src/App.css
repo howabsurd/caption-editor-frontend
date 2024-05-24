@@ -1,7 +1,7 @@
 .app{
   /* width: 100%; */
   max-width: 1600px;
-  margin: auto auto;    
+  margin: 0 auto;    
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 35%;
+  height: 270%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,12 +31,151 @@
   border-radius: 5px;
   max-width: 80%; 
   /* font-size: 20px; */
+  
   text-align: center;
 }
 
-.header{
-  height:45px;
+
+/* Header styles */
+.header {
+  background-color: black;
+  color: white;
+  padding: 20px 0; /* Adjust padding as needed */
 }
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin-left: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-links li {
+  display: inline-block; 
+  margin-right: 18px; 
+}
+
+.header-nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease; 
+}
+
+.header-nav-links li a:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+/* TwoCardComponent.css */
+.two-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: calc(35% - 20px); /* Adjust width as needed */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .two-card-container {
+    flex-direction: column;
+  }
+  
+  .card {
+    width: calc(100% - 20px);
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.card ul li {
+  font-size: large;
+  margin: 8px auto;
+}
+
+
+/* Banner1.css */
+/* Banner1.css */
+
+/* Default styles */
+.Banner1 {
+  max-width: 100%; /* Ensures the image doesn't exceed its parent container */
+}
+
+.Banner1 img {
+  margin : 12px auto;
+  width: 90%; /* Makes the image responsive */
+  max-height: 400px; /* Default height for smaller screens */
+  object-fit: contain; /* Fits the image within its container while maintaining aspect ratio */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .Banner1 img {
+    max-height: 500px; /* Increase height for larger screens */
+    /* max-width: 1400px; */
+    object-fit: fill;
+  }
+}
+
+/* FormCaptions.css */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.remove-button,
+.add-button,
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-button:hover,
+.add-button:hover,
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
 
 
  

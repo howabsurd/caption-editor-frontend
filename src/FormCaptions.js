@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css'; // Import CSS file for styling
 
 const FormCaptions = ({ URL, setURL, setCaptions }) => {
   const [captions, setLocalCaptions] = useState([{ title: '', startTime: '', endTime: '' }]);
@@ -30,10 +31,10 @@ const FormCaptions = ({ URL, setURL, setCaptions }) => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label htmlFor="url">URL:</label><br />
-        <input type="url" id="url" name="url" required /><br /><br />
+        <input type="url" id="url" name="url" className="input-field" required /><br /><br />
         {captions.map((caption, index) => (
           <div key={index}>
             <label htmlFor={`title${index}`}>Title:</label><br />
@@ -43,6 +44,7 @@ const FormCaptions = ({ URL, setURL, setCaptions }) => {
               name="title"
               value={caption.title}
               onChange={(e) => handleCaptionChange(index, e)}
+              className="input-field"
               required
             /><br />
             <label htmlFor={`startTime${index}`}>Start Time:</label><br />
@@ -52,6 +54,7 @@ const FormCaptions = ({ URL, setURL, setCaptions }) => {
               name="startTime"
               value={caption.startTime}
               onChange={(e) => handleCaptionChange(index, e)}
+              className="input-field"
               required
             /><br />
             <label htmlFor={`endTime${index}`}>End Time:</label><br />
@@ -61,14 +64,15 @@ const FormCaptions = ({ URL, setURL, setCaptions }) => {
               name="endTime"
               value={caption.endTime}
               onChange={(e) => handleCaptionChange(index, e)}
+              className="input-field"
               required
             /><br />
-            {index > 0 && <button type="button" onClick={() => handleRemoveCaption(index)}>-</button>}
+            {index > 0 && <button type="button" onClick={() => handleRemoveCaption(index)} className="remove-button">-</button>}
             <br /><br />
           </div>
         ))}
-        <button type="button" onClick={handleAddCaption}>+</button>
-        <button type="submit">Submit</button>
+        <button type="button" onClick={handleAddCaption} className="add-button">Add more</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   );
